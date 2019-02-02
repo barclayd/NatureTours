@@ -1,0 +1,25 @@
+{
+  "name": "naturetours",
+  "version": "1.0.0",
+  "description": "Amazon Rainforest promotional website made using advanced CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barclayd/NatureTours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barclayd/NatureTours/issues"
+  },
+  "homepage": "https://github.com/barclayd/NatureTours#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
