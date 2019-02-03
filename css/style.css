@@ -28,9 +28,10 @@ body {
     display: block;
     font-size: 5.5rem;
     font-weight: 400;
-    letter-spacing: 10px;
+    letter-spacing: 1rem;
     line-height: 95%;
     padding-bottom: 3rem;
+    line-height: 5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -42,6 +43,44 @@ body {
     animation-name: moveInRight;
     animation-duration: 1.1s;
     animation-timing-function: ease-out; }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #6FD5D5, #28B483);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  line-height: 3.5rem; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medum {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-large {
+  margin-bottom: 6rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -70,6 +109,11 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -112,13 +156,59 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn-text:link, .btn-text:visited {
+  color: #55c57a;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.01rem solid #55c57a;
+  padding: .03rem;
+  transition: all .2s; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem); }
+
+.btn-text::active {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 65%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: .2rem;
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -4rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 0rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 8rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
 .header {
   position: relative;
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(111, 213, 213, 0.8), rgba(40, 180, 131, 0.8)), url(../img/rainforest.jpeg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0%, 100% 70vh, 0 100%); }
+  clip-path: polygon(0 0, 100% 0%, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -134,7 +224,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: rgba(238, 238, 238, 0.685);
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -143,7 +232,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: orangered;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 2rem; }
